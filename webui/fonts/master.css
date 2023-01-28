@@ -1,0 +1,105 @@
+
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           Font: Ubuntu
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    @font-face
+    {
+        font-family     : "Ubuntu";
+        font-weight     : normal;
+        src             : url("Ubuntu/Ubuntu-Regular.ttf");
+    }
+
+    @font-face
+    {
+        font-family     : "Ubuntu";
+        font-weight     : bold;
+        src             : url("Ubuntu/Ubuntu-Bold.ttf");
+    }
+
+    @font-face
+    {
+        font-family     : "Ubuntu";
+        font-weight     : lighter;
+        src             : url("Ubuntu/Ubuntu-Light.ttf");
+    }
+
+    @font-face
+    {
+        font-family     : "Ubuntu";
+        font-weight     : bolder;
+        src             : url("Ubuntu/Ubuntu-Medium.ttf");
+    }
+    
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           Font: Streamster
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    @font-face
+    {
+        font-family     : "Streamster";
+        font-weight     : normal;
+        src             : url("Streamster/Streamster.ttf");
+    }
+    
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           Font: RoadRage
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    @font-face
+    {
+        font-family     : "RoadRage";
+        font-weight     : normal;
+        src             : url("RoadRage/RoadRage.otf");
+    }
+    
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           Font: Neon
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    @font-face
+    {
+        font-family     : "Neon";
+        font-weight     : normal;
+        src             : url("Neon/Neon.ttf");
+    }
+    
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           Font: Paralines
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    @font-face
+    {
+        font-family     : "Paralines";
+        font-weight     : normal;
+        src             : url("Paralines/Paralines.otf");
+    }
+    
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           Font: Mexcellent
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    @font-face
+    {
+        font-family     : "Mexcellent";
+        font-weight     : normal;
+        src             : url("Mexcellent/Mexcellent.ttf");
+    }

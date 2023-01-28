@@ -1,0 +1,4 @@
+client-files = [ 'client/*', 'webui/*' ]
+client-main = 'client/master.mjs'
+main = 'server/master.mjs'
+type = 'js'

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="fonts/master.css">
+    <!-- scripts -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/vue.min.js"></script>
+</head>
+<style>
+
+    @media screen and (max-width: 1940px)
+    {
+        html
+        {
+            font-size               : 16px;
+        }
+    }
+
+    @media screen and (min-width: 1941px)
+    {
+        html
+        {
+            font-size               : 24px;
+        }
+    }
+
+    *
+    {
+        user-select                 : none;
+    }
+
+    #title
+    {
+        width                       : auto;
+        height                      : auto;
+
+        position                    : absolute;
+        top                         : 2.5rem;
+        left                        : 2.5rem;
+
+        font-family                 : 'Ubuntu';
+        font-weight                 : bolder;
+        font-size                   : 2.0rem;
+        color                       : rgb(250,250,250);
+        text-shadow                 : 1px 1px 3px rgba(0,0,0,0.50);
+    }
+
+    section#position
+    {
+        width                       : 16.25rem;
+        height                      : 8.15rem;
+
+        position                    : absolute;
+        top                         : 7.5rem;
+        left                        : 2.5rem;
+
+        background                  : rgba(0,0,0,0.20);
+        border-radius               : 5px;
+    }
+
+        section#position > header
+        {
+            width                       : auto;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 1.25rem;
+            left                        : 1.87rem;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 1.2rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#position > div#posX,
+        section#position > div#posY,
+        section#position > div#posZ
+        {
+            width                       : auto;
+            height                      : auto;
+
+            position                    : absolute;
+            left                        : 1.87rem;
+        }
+
+            section#position > div#posX
+            {
+                top                         : 3.75rem;
+            }
+
+            section#position > div#posY
+            {
+                top                         : 5rem;
+            }
+
+            section#position > div#posZ
+            {
+                top                         : 6.25rem;
+            }
+
+        section#position > div#posX > span:nth-of-type(1),
+        section#position > div#posY > span:nth-of-type(1),
+        section#position > div#posZ > span:nth-of-type(1)
+        {
+            width                       : 6.25rem;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 50%;
+            left                        : 0px;
+            transform                   : translateY(-50%);
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#position > div#posX > span:nth-of-type(2),
+        section#position > div#posY > span:nth-of-type(2),
+        section#position > div#posZ > span:nth-of-type(2)
+        {
+            width                       : 6.25rem;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 50%;
+            left                        : 6.25rem;
+            transform                   : translateY(-50%);
+
+            display                     : flex;
+            flex-flow                   : row nowrap;
+            justify-content             : flex-end;
+            align-items                 : center;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+        }
+
+    section#rotation
+    {
+        width                       : 16.25rem;
+        height                      : 8.15rem;
+
+        position                    : absolute;
+        top                         : 17.5rem;
+        left                        : 2.5rem;
+
+        background                  : rgba(0,0,0,0.20);
+        border-radius               : 5px;
+    }
+
+        section#rotation > header
+        {
+            width                       : auto;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 1.25rem;
+            left                        : 1.87rem;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 1.2rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#rotation > div#rotX,
+        section#rotation > div#rotY,
+        section#rotation > div#rotZ
+        {
+            width                       : auto;
+            height                      : auto;
+
+            position                    : absolute;
+            left                        : 1.87rem;
+        }
+
+            section#rotation > div#rotX
+            {
+                top                         : 3.75rem;
+            }
+
+            section#rotation > div#rotY
+            {
+                top                         : 5rem;
+            }
+
+            section#rotation > div#rotZ
+            {
+                top                         : 6.25rem;
+            }
+
+        section#rotation > div#rotX > span:nth-of-type(1),
+        section#rotation > div#rotY > span:nth-of-type(1),
+        section#rotation > div#rotZ > span:nth-of-type(1)
+        {
+            width                       : 6.25rem;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 50%;
+            left                        : 0px;
+            transform                   : translateY(-50%);
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#rotation > div#rotX > span:nth-of-type(2),
+        section#rotation > div#rotY > span:nth-of-type(2),
+        section#rotation > div#rotZ > span:nth-of-type(2)
+        {
+            width                       : 6.25rem;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 50%;
+            left                        : 6.25rem;
+            transform                   : translateY(-50%);
+
+            display                     : flex;
+            flex-flow                   : row nowrap;
+            justify-content             : flex-end;
+            align-items                 : center;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+        }
+
+    section#speed
+    {
+        width                       : 16.25rem;
+        height                      : 8.0rem;
+
+        position                    : absolute;
+        top                         : 27.5rem;
+        left                        : 2.5rem;
+
+        background                  : rgba(0,0,0,0.20);
+        border-radius               : 5px;
+    }
+
+        section#speed > header
+        {
+            width                       : auto;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 1.25rem;
+            left                        : 1.87rem;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 1.2rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#speed > div#moveSpeed,
+        section#speed > div#turnSpeed
+        {
+            width                       : calc(100% - 1.8rem - 1.8rem);
+            height                      : 1.8rem;
+
+            position                    : absolute;
+            left                        : 1.8rem;
+        }
+
+            section#speed > div#moveSpeed
+            {
+                top                         : 3.2rem;
+            }
+
+            section#speed > div#turnSpeed
+            {
+                top                         : 5.2rem;
+            }
+
+        section#speed > div#moveSpeed > span:nth-of-type(1),
+        section#speed > div#turnSpeed > span:nth-of-type(1)
+        {
+            width                       : 6.25rem;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 50%;
+            left                        : 0px;
+            transform                   : translateY(-50%);
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#speed > div#moveSpeed > span:nth-of-type(2),
+        section#speed > div#turnSpeed > span:nth-of-type(2)
+        {
+            width                       : 6.25rem;
+            height                      : auto;
+
+            position                    : absolute;
+            top                         : 50%;
+            right                       : 2.0rem;
+            transform                   : translateY(-50%);
+
+            display                     : flex;
+            flex-flow                   : row nowrap;
+            justify-content             : flex-end;
+            align-items                 : center;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+        }
+
+        section#speed > div#moveSpeed > a,
+        section#speed > div#turnSpeed > a
+        {
+            width                       : 1.4rem;
+            height                      : 1.4rem;
+
+            position                    : absolute;
+            top                         : 50%;
+            transform                   : translateY(-50%);
+
+            display                     : flex;
+            flex-flow                   : row nowrap;
+            justify-content             : center;
+            align-items                 : center;
+
+            font-family                 : 'Ubuntu';
+            font-weight                 : bolder;
+            font-size                   : 0.8rem;
+            color                       : rgb(250,250,250);
+
+            background                  : rgba(245,170,94,0.50);
+            border-radius               : 50%;
+            cursor                      : pointer;
+        }
+
+            section#speed > div#moveSpeed > a:nth-of-type(1),
+            section#speed > div#turnSpeed > a:nth-of-type(1)
+            {
+                left                        : 6.0rem;
+            }
+
+            section#speed > div#moveSpeed > a:nth-of-type(2),
+            section#speed > div#turnSpeed > a:nth-of-type(2)
+            {
+                right                       : 0px;
+            }
+
+</style>
+<body>
+    
+    <header id="title">
+        FREECAM
+    </header>
+
+    <section id="position">
+        <header>
+            Kamera Position:
+        </header>
+        <div id="posX">
+            <span>
+                Pos. X:
+            </span>
+            <span>
+                {{ getPosX }}
+            </span>
+        </div>
+        <div id="posY">
+            <span>
+                Pos. Y:
+            </span>
+            <span>
+                {{ getPosY }}
+            </span>
+        </div>
+        <div id="posZ">
+            <span>
+                Pos. Z:
+            </span>
+            <span>
+                {{ getPosZ }}
+            </span>
+        </div>
+    </section>
+
+    <section id="rotation">
+        <header>
+            Kamera Rotation:
+        </header>
+        <div id="rotX">
+            <span>
+                Neigung:
+            </span>
+            <span>
+                {{ getRotX }}
+            </span>
+        </div>
+        <div id="rotY">
+            <span>
+                Rollen:
+            </span>
+            <span>
+                {{ getRotY }}
+            </span>
+        </div>
+        <div id="rotZ">
+            <span>
+                Drehung:
+            </span>
+            <span>
+                {{ getRotZ }}
+            </span>
+        </div>
+    </section>
+
+    <section id="speed">
+        <header>
+            Geschwindigkeit
+        </header>
+        <div id="moveSpeed">
+            <span>
+                Bewegung:
+            </span>
+            <span>
+                {{ getMoveSpeed }}
+            </span>
+            <a @click="decreaseMoveSpeed()">
+                -
+            </a>
+            <a @click="increaseMoveSpeed()">
+                +
+            </a>
+        </div>
+        <div id="turnSpeed">
+            <span>
+                Drehung:
+            </span>
+            <span>
+                {{ getTurnSpeed }}
+            </span>
+            <a @click="decreaseTurnSpeed()">
+                -
+            </a>
+            <a @click="increaseTurnSpeed()">
+                +
+            </a>
+        </div>
+    </section>
+
+    <script>
+    
+        var posApp = new Vue({
+            el   : 'section#position',
+            data : {
+                posX : 175.21547,
+                posY : 0,
+                posZ : 0
+            },
+            computed : {
+                getPosX: function()
+                {
+                    return ( Math.round(this.posX * 100) / 100 );
+                },
+                getPosY: function()
+                {
+                    return ( Math.round(this.posY * 100) / 100 );
+                },
+                getPosZ: function()
+                {
+                    return ( Math.round(this.posZ * 100) / 100 );
+                }
+            },
+            methods : {
+                
+            }
+        });
+
+        alt.on('Position:SetX', function(posX)
+        {
+            Vue.set(posApp, 'posX', posX);
+        })
+
+        alt.on('Position:SetY', function(posY)
+        {
+            Vue.set(posApp, 'posY', posY);
+        })
+
+        alt.on('Position:SetZ', function(posZ)
+        {
+            Vue.set(posApp, 'posZ', posZ);
+        })
+    
+
+        var rotApp = new Vue({
+            el   : 'section#rotation',
+            data : {
+                rotX : 175.21547,
+                rotY : 0,
+                rotZ : 0
+            },
+            computed : {
+                getRotX: function()
+                {
+                    return ( Math.round(this.rotX * 100) / 100 );
+                },
+                getRotY: function()
+                {
+                    return ( Math.round(this.rotY * 100) / 100 );
+                },
+                getRotZ: function()
+                {
+                    return ( Math.round(this.rotZ * 100) / 100 );
+                }
+            },
+            methods : {
+                
+            }
+        });
+
+        alt.on('Rotation:SetX', function (rotX)
+        {
+            Vue.set(rotApp, 'rotX', rotX);
+        });
+
+        alt.on('Rotation:SetY', function (rotY)
+        {
+            Vue.set(rotApp, 'rotY', rotY);
+        });
+
+        alt.on('Rotation:SetZ', function (rotZ)
+        {
+            Vue.set(rotApp, 'rotZ', rotZ);
+        });
+    
+
+        var speedApp = new Vue({
+            el   : 'section#speed',
+            data : {
+                move : 4.00,
+                turn : 1.50
+            },
+            computed : {
+                getMoveSpeed: function()
+                {
+                    return this.move;
+                },
+                getTurnSpeed: function()
+                {
+                    return this.turn;
+                }
+            },
+            methods : {
+                decreaseMoveSpeed : function()
+                {
+                    alt.emit("Speed:DecreaseMoveSpeed");
+                },
+                increaseMoveSpeed : function()
+                {
+                    alt.emit("Speed:IncreaseMoveSpeed");
+                },
+                decreaseTurnSpeed : function()
+                {
+                    alt.emit("Speed:DecreaseTurnSpeed");
+                },
+                increaseTurnSpeed : function()
+                {
+                    alt.emit("Speed:IncreaseTurnSpeed");
+                }
+            }
+        });
+
+        alt.on('Speed:MoveSpeed', function(moveSpeed)
+        {
+            Vue.set(speedApp, 'move', moveSpeed);
+        });
+
+        alt.on('Speed:TurnSpeed', function(turnSpeed)
+        {
+            Vue.set(speedApp, 'turn', turnSpeed);
+        });
+    
+    </script>
+
+</body>
+</html>
